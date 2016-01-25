@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title Raspberry Pi Home
+        link(rel='stylesheet', href='styles/style.css')
+        link(rel='stylesheet', href='styles/font-awesome.css')
+    body
+        div#topbar
+            img(src="images/raspberry.png").topbar-icon
+            h2.topbar-title My Raspberry Pi Homepage
+        div#content
+            img(src="images/welcome.png").welcome-img
+            div#link-container
+                h2
+                    span.fa.fa-rocket
+                    | Services disponibles
+                br
+                a(href="/QuietTime/")
+                    span.fa.fa-moon-o
+                    | QuietTime
+                br
+                br
+                a(href="/PAF/")
+                    span.fa.fa-table
+                    | Tableur logique
+                br
+                br
+                a(href="/mdt/")
+                    span.fa.fa-cog
+                    | Motor Driver Test Interface

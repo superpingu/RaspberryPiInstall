@@ -1,0 +1,20 @@
+#! /bin/sh
+# /etc/init.d/PIconnector
+#
+
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    forever start /var/apps/rpc/piconnector.js
+    ;;
+  stop)
+    forever stop /var/apps/rpc/piconnector.js
+    ;;
+  *)
+    echo "Usage: /etc/init.d/PIconnector {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

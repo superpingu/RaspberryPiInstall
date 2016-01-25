@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div#topbar
+    img(src="/images/raspberry.png").topbar-icon
+    span.topbar-title Raspberry Pi Serial Port
+  div#open-port
+    label(for="baudrate") Baudrate :
+    input(id="baudrate", type="number")
+    a#connect-port connect
+      span.fa.fa-plug
+    a#clear clear
+      span.fa.fa-file-o
+  div#serial
