@@ -18,23 +18,23 @@ sudo apt-get upgrade
 Pour installer NodeJS (remplacer "4.2.3" par la version stable la plus récente):
 
 ```bash
-wget https://nodejs.org/dist/v4.2.3/node-v4.2.3-linux-armv7l.tar.gz
-tar -xvf node-v4.2.3-linux-armv7l.tar.gz
-cd node-v4.2.3-linux-armv7l
+wget https://nodejs.org/dist/v4.3.0/node-v4.3.0-linux-armv7l.tar.gz
+tar -xvf node-v4.3.0-linux-armv7l.tar.gz
+cd node-v4.3.0-linux-armv7l
 sudo cp -R * /usr/local/
 ```
 
 puis
 
 ```bash
-sudo apt-get install -y lighttpd g++-4.7
+sudo apt-get install -y lighttpd g++-4.8
 ```
 
 assurer le support de C++11 : choisir la version 4.7 à la dernière étape
 
 ```bash
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.6
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.7 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
 sudo update-alternatives --config gcc
 ```
 et installer l'outil de build pour node et forever:
