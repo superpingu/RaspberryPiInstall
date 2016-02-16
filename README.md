@@ -54,7 +54,7 @@ cd wiringPi
 Robot drivers (avant faire le point *clés ssh* de la Configuration):
 
 ```bash
-git clone git@bitbucket.org:telecomparitoc/robotdriver.git
+git clone https://github.com/TelecomParistoc/RobotDriver.git
 cd robotdriver
 make
 sudo make install
