@@ -1,0 +1,29 @@
+#! /bin/sh
+# /etc/init.d/picompile
+#
+
+### BEGIN INIT INFO
+# Provides:          picompile
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Pi remote compiler service
+# Description:       This service starts pi compiler
+### END INIT INFO
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    /usr/local/bin/forever start /var/apps/PiCompile/client/app.js
+    ;;
+  stop)
+    /usr/local/bin/forever stop /var/apps/Picompile/client/app.js
+    ;;
+  *)
+    echo "Usage: /etc/init.d/PIconnector {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
